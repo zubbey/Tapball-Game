@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(35, 35, 39);
+    font-family: sans-serif;
+}
+#app{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding: 30px; */
+}
+#canvas {
+    background-color: rgb(43, 43, 46);
+    background-image: url('./assets/gamebg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid rgb(100, 100, 105);
+}
+#image {
+    display: none;
+}
+img{
+    display: none;
+}
+#stateContainer{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(100, 100, 105);
+    width: 100%;
+    max-width: 750px;
+    top: 0;
+    padding: 5px 10px;
+    margin: 5px 20px;
+    border-radius: 10px;
+    color: white;
+}
+:is(#startButton, #controls) {
+    width: 35px;
+    outline: 0;
+    padding: 10px;
+    margin: 0;
+    color: white;
+    background-color: tomato;
+    border: 0px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 300ms ease-in;
+}
+#controls:hover {
+    transform: scale(1.2);
+    transition: all 300ms ease-in;
+}
+#controls:active {
+    transform: scale(0.5);
+    transition: all 300ms ease-in;
+}
+#lives{
+    width: 100px;
+    color: tomato;
+    font-size: 18px;
+}
+#levels{
+    width: 100px;
+    text-align: right;
+}
+#startButton {
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    top: calc(50% + 5px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#startButton:hover{
+    background-color: rgba(255 99 71 / 62%)
+}
+#startButton:active{
+    transform: translate(-50%, 50%);
+}
